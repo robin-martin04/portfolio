@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Robin Martin - Projet GSB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .mission-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+            background-color: white;
+        }
+        
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .mission-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .mission-header:hover {
+            background-color: #2980b9;
+        }
+        
+        .mission-body {
+            padding: 1.5rem;
+            background-color: #f8fafc;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .mission-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .tech-badge {
+            background-color: var(--secondary-color);
+            color: white;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+        }
+        
+        .schema-img {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+            margin: 2rem 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .schema-img:hover {
+            transform: scale(1.02);
+        }
+        
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .tech-used {
+            background-color: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white shadow-sm sticky-top">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <h1 class="fw-bold mb-0">Portfolio</h1>
+            <nav>
+                <ul class="nav text-uppercase fw-bold">
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark active" href="projet.html">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="cv-robin-martin.pdf" target="_blank">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Atelier de professionnalisation</h1>
+            <p class="lead">Infrastructure réseau et système pour GSB Pharma</p>
+        </div>
+    </section>
+
+    <div class="container mb-5">
+        <section id="project-intro">
+            <h2 class="section-title text-center">Contexte du Projet</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="intro-text">
+                        Le projet d'atelier de professionnalisation a pour objectif de concevoir, déployer et optimiser l'architecture réseau et système de l'entreprise GSB (Gestion des Systèmes Pharmaceutiques). GSB est une entreprise pharmaceutique spécialisée dans la production, la distribution et la gestion de médicaments. La gestion efficace des données, des stocks, des processus de production et des informations sensibles est cruciale pour la performance et la conformité réglementaire de l'entreprise.
+                    </p>
+                    <p class="intro-text">
+                        L'objectif du projet est de concevoir une infrastructure réseau et système robuste, sécurisée et évolutive pour répondre aux exigences spécifiques de l'industrie pharmaceutique, tout en garantissant la conformité avec les normes strictes de sécurité et de traçabilité des données.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <img src="schéma.png" alt="Schéma de l'architecture GSB" class="schema-img">
+            </div>
+        </section>
+
+        <section id="missions">
+            <h2 class="section-title text-center">Missions réalisées</h2>
+            
+            <!-- Mission 1 -->
+            <div class="mission-card">
+                <div class="mission-header" data-bs-toggle="collapse" data-bs-target="#mission1">
+                    <span><i class="fas fa-network-wired mission-icon"></i> Mission 1 : Mise en place d'un domaine et découpage du réseau</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div id="mission1" class="collapse show">
+                    <div class="mission-body">
+                        <p>La Mission 1 consiste à créer un domaine Active Directory, découper le réseau en VLANs pour améliorer la sécurité et la gestion, configurer les serveurs DNS et DHCP, définir les droits d'accès, sécuriser les connexions, tester la configuration, et documenter le tout pour une gestion efficace du réseau.</p>
+                        
+                        <div class="tech-used">
+                            <h5><i class="fas fa-tools me-2"></i>Technologies utilisées :</h5>
+                            <div>
+                                <span class="tech-badge">Active Directory</span>
+                                <span class="tech-badge">VLAN</span>
+                                <span class="tech-badge">DNS</span>
+                                <span class="tech-badge">DHCP</span>
+                                <span class="tech-badge">Windows Server</span>
+                                <span class="tech-badge">GPO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mission 2 -->
+            <div class="mission-card">
+                <div class="mission-header" data-bs-toggle="collapse" data-bs-target="#mission2">
+                    <span><i class="fas fa-shield-alt mission-icon"></i> Mission 2 : Mise en place de la DMZ (Zone Démilitarisée)</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div id="mission2" class="collapse show">
+                    <div class="mission-body">
+                        <p>La Mission 2 consiste à concevoir et mettre en place une DMZ pour héberger les services exposés à Internet, en configurant des pare-feux pour séparer cette zone du réseau interne, contrôler les accès, surveiller les activités et assurer la sécurité des services tout en garantissant des performances optimales.</p>
+                        
+                        <div class="tech-used">
+                            <h5><i class="fas fa-tools me-2"></i>Technologies utilisées :</h5>
+                            <div>
+                                <span class="tech-badge">Pfsense</span>
+                                <span class="tech-badge">DMZ</span>
+                                <span class="tech-badge">Pare-feu</span>
+                                <span class="tech-badge">NAT</span>
+                                <span class="tech-badge">Reverse Proxy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mission 3 -->
+            <div class="mission-card">
+                <div class="mission-header" data-bs-toggle="collapse" data-bs-target="#mission3">
+                    <span><i class="fas fa-code mission-icon"></i> Mission 3 : Développement de Scripts - Sûreté du Système d'Information</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div id="mission3" class="collapse show">
+                    <div class="mission-body">
+                        <p>La Mission 3 consiste à développer et déployer des scripts automatisés pour renforcer la sécurité du système d'information de GSB en automatisant les mises à jour, la gestion des utilisateurs, la surveillance des logs et la vérification de l'intégrité des systèmes.</p>
+                        
+                        <div class="tech-used">
+                            <h5><i class="fas fa-tools me-2"></i>Technologies utilisées :</h5>
+                            <div>
+                                <span class="tech-badge">PowerShell</span>
+                                <span class="tech-badge">Bash</span>
+                                <span class="tech-badge">Automation</span>
+                                <span class="tech-badge">Task Scheduler</span>
+                                <span class="tech-badge">Log Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mission 4 -->
+            <div class="mission-card">
+                <div class="mission-header" data-bs-toggle="collapse" data-bs-target="#mission4">
+                    <span><i class="fas fa-desktop mission-icon"></i> Mission 4 : Supervision du Système d'Information</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div id="mission4" class="collapse show">
+                    <div class="mission-body">
+                        <p>La Mission 4 consiste à superviser le système d'information en mettant en place des outils de surveillance (Zabbix et WireShark), un logiciel de gestion d'incidents (GLPI), et une répartition de charge pour le site Intranet avec un équilibrage réseau (NLB), tout en documentant les procédures et en réalisant les tests nécessaires.</p>
+                        
+                        <div class="tech-used">
+                            <h5><i class="fas fa-tools me-2"></i>Technologies utilisées :</h5>
+                            <div>
+                                <span class="tech-badge">Zabbix</span>
+                                <span class="tech-badge">GLPI</span>
+                                <span class="tech-badge">WireShark</span>
+                                <span class="tech-badge">NLB</span>
+                                <span class="tech-badge">Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5>Robin Martin</h5>
+                    <p>Étudiant en BTS SIO</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fas fa-envelope fa-2x"></i></a>
+                </div>
+            </div>
+            <hr class="my-3 bg-light">
+            <div class="text-center">
+                <p class="mb-0">© 2024 - Portfolio Robin Martin - BTS SIO</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html>

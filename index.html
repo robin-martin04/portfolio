@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Robin Martin - BTS SIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .skill-icon {
+            font-size: 2rem;
+            margin: 10px;
+            color: #6c757d;
+        }
+        
+        .skill-icon:hover {
+            color: var(--primary-color);
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .certification-badge {
+            max-width: 120px;
+            transition: transform 0.3s ease;
+        }
+        
+        .certification-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .tech-badge {
+            background-color: var(--secondary-color);
+            color: white;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .certification-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .certification-link:hover {
+            color: var(--primary-color);
+        }
+
+        .legal-text {
+            font-size: 0.8rem;
+            color: #aaa;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white shadow-sm sticky-top">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <h1 class="fw-bold mb-0">Portfolio</h1>
+            <nav>
+                <ul class="nav text-uppercase fw-bold">
+                    <li class="nav-item"><a class="nav-link text-dark" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="projet.html">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="cv-robin-martin.pdf" target="_blank">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container text-center hero-content">
+            <img src="./1706878849595.jpg" alt="Ma photo de profil" class="profile-img rounded-circle mb-4">
+            <h1 class="display-4 fw-bold mb-3">Robin Martin</h1>
+            <h2 class="mb-4">Étudiant en BTS SIO</h2>
+            <p class="lead mb-0">Passionné par les technologies informatiques, j'ai acquis diverses compétences en administration système, réseau et développement web.</p>
+        </div>
+    </section>
+
+    <main>
+        <section id="competences" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center section-title">Compétences</h2>
+                <div class="row text-center">
+                    <div class="col-md-6">
+                        <h4 class="mb-4">Compétences Techniques</h4>
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <div class="text-center mx-3">
+                                <i class="fab fa-windows skill-icon" title="Windows AD"></i>
+                                <p>Windows AD</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fas fa-server skill-icon" title="IIS"></i>
+                                <p>IIS</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fas fa-shield-alt skill-icon" title="Pfsense"></i>
+                                <p>Pfsense</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fas fa-tools skill-icon" title="GLPI"></i>
+                                <p>GLPI</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fas fa-chart-line skill-icon" title="Zabbix"></i>
+                                <p>Zabbix</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fab fa-html5 skill-icon" title="HTML/CSS"></i>
+                                <p>HTML/CSS</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fab fa-linux skill-icon" title="Debian"></i>
+                                <p>Debian</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="mb-4">Outils</h4>
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <div class="text-center mx-3">
+                                <i class="fas fa-code skill-icon" title="VSCode"></i>
+                                <p>VSCode</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fab fa-docker skill-icon" title="Docker"></i>
+                                <p>Docker</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fab fa-github skill-icon" title="GitHub"></i>
+                                <p>GitHub</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fas fa-camera skill-icon" title="Photoshop"></i>
+                                <p>Photoshop</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fas fa-video skill-icon" title="Vegas Pro"></i>
+                                <p>Vegas Pro</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fab fa-figma skill-icon" title="Figma"></i>
+                                <p>Figma</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fas fa-music skill-icon" title="FL Studio"></i>
+                                <p>FL Studio</p>
+                            </div>
+                            <div class="text-center mx-3">
+                                <i class="fas fa-cogs skill-icon" title="Blender"></i>
+                                <p>Blender</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="py-5">
+            <div class="container">
+                <h2 class="text-center section-title">Certifications</h2>
+                <div class="row text-center justify-content-center">
+                    <div class="col-md-3 col-6 mb-4">
+                        <a href="secnum.pdf" target="_blank" class="certification-link">
+                            <i class="fas fa-shield-alt fa-3x mb-3"></i>
+                            <h5>ANSSI SecNum</h5>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <a href="rgpd.pdf" target="_blank" class="certification-link">
+                            <i class="fas fa-user-shield fa-3x mb-3"></i>
+                            <h5>RGPD</h5>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <a href="https://www.credly.com/badges/ef06fd04-7a51-4ba9-a4f8-0dacad41459a/public_url" target="_blank" class="certification-link">
+                            <i class="fas fa-network-wired fa-3x mb-3"></i>
+                            <h5>CCNA</h5>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4">
+                        <div class="certification-link">
+                            <i class="fas fa-shield-virus fa-3x mb-3"></i>
+                            <h5>PIX</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6 mb-4 mx-auto">
+                        <div class="certification-link">
+                            <i class="fas fa-graduation-cap fa-3x mb-3"></i>
+                            <h5>Cambridge</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="veille" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Veille Technologique</h2>
+            <div class="row justify-content-center">
+                <!-- Carte Outils de Veille -->
+                <div class="col-lg-5 mb-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="fas fa-binoculars fa-3x mb-3 text-primary"></i>
+                            <h3 class="h4 mb-3">Outils de Veille</h3>
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="d-flex align-items-center mb-3 p-3 bg-white rounded shadow-sm w-100">
+                                    <i class="fas fa-rss fa-2x me-3 text-primary"></i>
+                                    <div class="text-start">
+                                        <h5 class="mb-1">Feedly RSS</h5>
+                                        <p class="mb-0 text-muted small">Agrégateur de flux RSS</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3 p-3 bg-white rounded shadow-sm w-100">
+                                    <i class="fab fa-twitter fa-2x me-3 text-primary"></i>
+                                    <div class="text-start">
+                                        <h5 class="mb-1">Twitter</h5>
+                                        <p class="mb-0 text-muted small">
+                                            <a href="https://twitter.com/_veilleinfo" target="_blank" class="text-decoration-none">@_veilleinfo</a> | 
+                                            <a href="https://twitter.com/technewsworld" target="_blank" class="text-decoration-none">@technewsworld</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Carte Sujets de Veille -->
+                <div class="col-lg-5 mb-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <i class="fas fa-lightbulb fa-3x mb-3 text-primary"></i>
+                            <h3 class="h4 mb-3">Sujets Suivis</h3>
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="d-flex align-items-center mb-3 p-3 bg-white rounded shadow-sm w-100">
+                                    <i class="fas fa-shield-alt fa-2x me-3 text-primary"></i>
+                                    <div class="text-start">
+                                        <h5 class="mb-1">Cybersécurité</h5>
+                                        <p class="mb-0 text-muted small">Tendances et vulnérabilités</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3 p-3 bg-white rounded shadow-sm w-100">
+                                    <i class="fas fa-cloud fa-2x me-3 text-primary"></i>
+                                    <div class="text-start">
+                                        <h5 class="mb-1">Cloud Computing</h5>
+                                        <p class="mb-0 text-muted small">Évolutions et innovations</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5>Robin Martin</h5>
+                    <p>Étudiant en BTS SIO</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="https://www.linkedin.com/in/robin-martin04" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="mailto:robinmartin0404@gmail.com" class="text-white mx-2"><i class="fas fa-envelope fa-2x"></i></a>
+                </div>
+            </div>
+            <hr class="my-3 bg-light">
+            <div class="text-center">
+                <p class="mb-0">© 2025 - Portfolio Robin Martin - BTS SIO</p>
+                <p class="legal-text">
+                    Hébergement : <br>
+                    Ce portfolio a été créé dans le cadre de mon BTS SIO<br>
+                    Dernière mise à jour : avril 2025
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

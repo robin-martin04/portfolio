@@ -99,10 +99,10 @@
             <h1 class="fw-bold mb-0">Portfolio</h1>
             <nav>
                 <ul class="nav text-uppercase fw-bold">
-                    <li class="nav-item"><a class="nav-link text-dark" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="projet.html">Projets</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#certifications">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="veille.html">Veille</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark active" href="veille.html">Veille</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="cv-robin-martin.pdf" target="_blank">CV</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="tableau.pdf">Tableau de Synthèse</a></li>
                 </ul>
@@ -189,93 +189,154 @@
                                 </div>
                                 
                                 <!-- Colonne Articles Complets -->
-                                <!-- Colonne Articles Complets -->
-<div class="col-md-6">
-    <h3 class="h4 mb-4 text-center"><i class="fas fa-book-open me-2"></i>Articles Complets</h3>
-    <ul class="nav nav-tabs mb-4" id="articleTabs" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="deepmind-tab" data-bs-toggle="tab" data-bs-target="#deepmind" type="button" role="tab">DeepMind IA</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="wrecksteel-tab" data-bs-toggle="tab" data-bs-target="#wrecksteel" type="button" role="tab">WRECKSTEEL</button>
-        </li>
-    </ul>
+                                <div class="col-md-6">
+                                    <h3 class="h4 mb-4 text-center"><i class="fas fa-book-open me-2"></i>Articles Complets</h3>
+                                    <ul class="nav nav-tabs mb-4" id="articleTabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="deepmind-tab" data-bs-toggle="tab" data-bs-target="#deepmind" type="button" role="tab">DeepMind IA</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="wrecksteel-tab" data-bs-toggle="tab" data-bs-target="#wrecksteel" type="button" role="tab">WRECKSTEEL</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="erreurhumaine-tab" data-bs-toggle="tab" data-bs-target="#erreurhumaine" type="button" role="tab">ZATAZ</button>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="tab-content" id="articleTabsContent">
+                                        <!-- Article DeepMind -->
+                                        <div class="tab-pane fade show active" id="deepmind" role="tabpanel">
+                                            <div class="article-content">
+                                                <h4 class="h5">🛡️ Veille technologique : Les risques potentiels de l'IA avancée en cybersécurité selon DeepMind</h4>
+                                                <p class="text-muted small">📅 Date de publication : Mars 2025</p>
+                                                <p><strong>🧠 Thème :</strong> Cybersécurité & Intelligence Artificielle</p>
+                                                <p><strong>🔍 Source :</strong> DeepMind — Evaluating Potential Cybersecurity Threats of Advanced AI</p>
 
-    <div class="tab-content" id="articleTabsContent">
-        <!-- Article DeepMind -->
-        <div class="tab-pane fade show active" id="deepmind" role="tabpanel">
-            <div class="article-content">
-                <h4 class="h5">🛡️ Veille technologique : Les risques potentiels de l’IA avancée en cybersécurité selon DeepMind</h4>
-                <p class="text-muted small">📅 Date de publication : Mars 2025</p>
-                <p><strong>🧠 Thème :</strong> Cybersécurité & Intelligence Artificielle</p>
-                <p><strong>🔍 Source :</strong> DeepMind — Evaluating Potential Cybersecurity Threats of Advanced AI</p>
+                                                <h5 class="h6 mt-3">🧩 Contexte</h5>
+                                                <p>L'essor de l'intelligence artificielle (IA), notamment des modèles avancés comme les LLMs (Large Language Models), soulève de nombreuses opportunités dans l'automatisation, la détection de menaces, et la défense numérique. Cependant, il présente également des risques accrus en matière de cybersécurité. L'article publié par DeepMind, filiale IA de Google, aborde de manière approfondie ces menaces émergentes.</p>
 
-                <h5 class="h6 mt-3">🧩 Contexte</h5>
-                <p>L’essor de l’intelligence artificielle (IA), notamment des modèles avancés comme les LLMs (Large Language Models), soulève de nombreuses opportunités dans l’automatisation, la détection de menaces, et la défense numérique. Cependant, il présente également des risques accrus en matière de cybersécurité. L’article publié par DeepMind, filiale IA de Google, aborde de manière approfondie ces menaces émergentes.</p>
+                                                <h5 class="h6 mt-3">⚠️ Quels sont les risques identifiés ?</h5>
+                                                <ul>
+                                                    <li><strong>Automatisation des attaques :</strong> Les IA peuvent aider à automatiser des attaques complexes, comme le phishing ou l'ingénierie sociale, en personnalisant les messages à une échelle massive.</li>
+                                                    <li><strong>Exploration de vulnérabilités :</strong> Certains modèles pourraient être utilisés pour rechercher des failles de sécurité dans du code source, comme un assistant pour les attaquants.</li>
+                                                    <li><strong>Contournement de défenses :</strong> Des IA pourraient apprendre à éviter les systèmes de détection (IDS/IPS) ou générer du code malveillant plus difficile à repérer.</li>
+                                                </ul>
 
-                <h5 class="h6 mt-3">⚠️ Quels sont les risques identifiés ?</h5>
-                <ul>
-                    <li><strong>Automatisation des attaques :</strong> Les IA peuvent aider à automatiser des attaques complexes, comme le phishing ou l’ingénierie sociale, en personnalisant les messages à une échelle massive.</li>
-                    <li><strong>Exploration de vulnérabilités :</strong> Certains modèles pourraient être utilisés pour rechercher des failles de sécurité dans du code source, comme un assistant pour les attaquants.</li>
-                    <li><strong>Contournement de défenses :</strong> Des IA pourraient apprendre à éviter les systèmes de détection (IDS/IPS) ou générer du code malveillant plus difficile à repérer.</li>
-                </ul>
+                                                <h5 class="h6 mt-3">🧪 Méthode d'évaluation de DeepMind</h5>
+                                                <p>DeepMind propose un cadre d'évaluation appelé "Cybersecurity Risk Framework", structuré autour de 3 axes :</p>
+                                                <ol>
+                                                    <li><strong>Capacités :</strong> Que peut réellement faire le modèle ?</li>
+                                                    <li><strong>Accessibilité :</strong> Est-ce que ce modèle est ouvert ou contrôlé ?</li>
+                                                    <li><strong>Abusabilité :</strong> Dans quelle mesure peut-il être détourné à des fins malveillantes ?</li>
+                                                </ol>
+                                                <p>L'objectif est de prévenir les risques avant la mise à disposition publique d'un modèle d'IA.</p>
 
-                <h5 class="h6 mt-3">🧪 Méthode d’évaluation de DeepMind</h5>
-                <p>DeepMind propose un cadre d’évaluation appelé “Cybersecurity Risk Framework”, structuré autour de 3 axes :</p>
-                <ol>
-                    <li><strong>Capacités :</strong> Que peut réellement faire le modèle ?</li>
-                    <li><strong>Accessibilité :</strong> Est-ce que ce modèle est ouvert ou contrôlé ?</li>
-                    <li><strong>Abusabilité :</strong> Dans quelle mesure peut-il être détourné à des fins malveillantes ?</li>
-                </ol>
-                <p>L’objectif est de prévenir les risques avant la mise à disposition publique d’un modèle d’IA.</p>
+                                                <h5 class="h6 mt-3">🛡️ Mesures de protection recommandées</h5>
+                                                <ul>
+                                                    <li>Des tests internes rigoureux,</li>
+                                                    <li>Une collaboration active avec la communauté cybersécurité,</li>
+                                                    <li>Une régulation équilibrée pour limiter les abus tout en soutenant l'innovation.</li>
+                                                </ul>
 
-                <h5 class="h6 mt-3">🛡️ Mesures de protection recommandées</h5>
-                <ul>
-                    <li>Des tests internes rigoureux,</li>
-                    <li>Une collaboration active avec la communauté cybersécurité,</li>
-                    <li>Une régulation équilibrée pour limiter les abus tout en soutenant l’innovation.</li>
-                </ul>
+                                                <h5 class="h6 mt-3">✅ Conclusion</h5>
+                                                <p>Cet article de DeepMind montre que l'IA, tout en étant prometteuse, peut aussi amplifier les cybermenaces si elle est mal utilisée. Il est crucial pour les techniciens et administrateurs systèmes et réseaux de comprendre ces risques pour mieux intégrer l'IA de façon sécurisée dans les infrastructures informatiques.</p>
+                                            </div>
+                                        </div>
 
-               
+                                        <!-- Article WRECKSTEEL -->
+                                        <div class="tab-pane fade" id="wrecksteel" role="tabpanel">
+                                            <div class="article-content">
+                                                <h4 class="h5">🔍 Veille technologique : WRECKSTEEL, une cybermenace ciblant l'Ukraine</h4>
+                                                <p class="text-muted small">📅 Date de publication : Avril 2025</p>
+                                                <p><strong>🧠 Thème :</strong> Cybersécurité — Cyberattaques étatiques</p>
+                                                <p><strong>🔍 Source :</strong> The Hacker News – Rapport du CERT-UA</p>
 
-                <h5 class="h6 mt-3">✅ Conclusion</h5>
-                <p>Cet article de DeepMind montre que l’IA, tout en étant prometteuse, peut aussi amplifier les cybermenaces si elle est mal utilisée. Il est crucial pour les techniciens et administrateurs systèmes et réseaux de comprendre ces risques pour mieux intégrer l’IA de façon sécurisée dans les infrastructures informatiques.</p>
-            </div>
-        </div>
+                                                <h5 class="h6 mt-3">🧩 Contexte</h5>
+                                                <p>Le CERT-UA (Computer Emergency Response Team of Ukraine) a détecté une série d'attaques majeures contre des entités gouvernementales et des infrastructures critiques. Ces attaques sont attribuées à un groupe identifié sous le nom de UAC-0219.</p>
 
-        <!-- Article WRECKSTEEL -->
-        <div class="tab-pane fade" id="wrecksteel" role="tabpanel">
-            <div class="article-content">
-                <h4 class="h5">🔍 Veille technologique : WRECKSTEEL, une cybermenace ciblant l’Ukraine</h4>
-                <p class="text-muted small">📅 Date de publication : Avril 2025</p>
-                <p><strong>🧠 Thème :</strong> Cybersécurité — Cyberattaques étatiques</p>
-                <p><strong>🔍 Source :</strong> The Hacker News – Rapport du CERT-UA</p>
+                                                <h5 class="h6 mt-3">🛠️ Méthode d'attaque</h5>
+                                                <ul>
+                                                    <li>Campagnes de phishing à grande échelle via des emails compromis,</li>
+                                                    <li>Utilisation de liens malveillants hébergés sur DropMeFiles et Google Drive,</li>
+                                                    <li>Déploiement de scripts VBS et PowerShell pour l'exfiltration de données sensibles.</li>
+                                                </ul>
 
-                <h5 class="h6 mt-3">🧩 Contexte</h5>
-                <p>Le CERT-UA (Computer Emergency Response Team of Ukraine) a détecté une série d’attaques majeures contre des entités gouvernementales et des infrastructures critiques. Ces attaques sont attribuées à un groupe identifié sous le nom de UAC-0219.</p>
+                                                <h5 class="h6 mt-3">🎯 Groupe responsable</h5>
+                                                <p>Le groupe UAC-0219 est actif depuis l'automne 2024. Il cible principalement les infrastructures critiques avec un haut niveau de sophistication.</p>
 
-                <h5 class="h6 mt-3">🛠️ Méthode d’attaque</h5>
-                <ul>
-                    <li>Campagnes de phishing à grande échelle via des emails compromis,</li>
-                    <li>Utilisation de liens malveillants hébergés sur DropMeFiles et Google Drive,</li>
-                    <li>Déploiement de scripts VBS et PowerShell pour l’exfiltration de données sensibles.</li>
-                </ul>
+                                                <h5 class="h6 mt-3">📌 Analyse stratégique</h5>
+                                                <p>Cette menace illustre l'augmentation des attaques cybernétiques à dimension géopolitique. Elle montre également la nécessité d'outils de détection automatisés, de politiques de sensibilisation renforcées et d'une coordination internationale en matière de cybersécurité.</p>
 
-                <h5 class="h6 mt-3">🎯 Groupe responsable</h5>
-                <p>Le groupe UAC-0219 est actif depuis l’automne 2024. Il cible principalement les infrastructures critiques avec un haut niveau de sophistication.</p>
+                                                <h5 class="h6 mt-3">✅ Conclusion</h5>
+                                                <p>WRECKSTEEL est un cas concret d'attaque ciblée à haute intensité, et souligne l'importance pour les futurs professionnels IT de rester informés et préparés. Une veille technologique active est indispensable pour anticiper ces risques.</p>
+                                            </div>
+                                        </div>
 
-                <h5 class="h6 mt-3">📌 Analyse stratégique</h5>
-                <p>Cette menace illustre l’augmentation des attaques cybernétiques à dimension géopolitique. Elle montre également la nécessité d’outils de détection automatisés, de politiques de sensibilisation renforcées et d’une coordination internationale en matière de cybersécurité.</p>
-
-                
-
-                <h5 class="h6 mt-3">✅ Conclusion</h5>
-                <p>WRECKSTEEL est un cas concret d’attaque ciblée à haute intensité, et souligne l'importance pour les futurs professionnels IT de rester informés et préparés. Une veille technologique active est indispensable pour anticiper ces risques.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
+                                        <!-- Article Erreur Humaine -->
+                                        <div class="tab-pane fade" id="erreurhumaine" role="tabpanel">
+                                            <div class="article-content">
+                                                <h4 class="h5">🔐 L'erreur humaine, talon d'Achille de la cybersécurité</h4>
+                                                <p class="text-muted small">Damien Bancal - Mai 2025 | DGSI, Social Engineering</p>
+                                                
+                                                <div class="alert alert-danger mb-3">
+                                                    <strong>Statistique clé :</strong> 95% des cyberattaques exploitent l'erreur humaine (World Economic Forum)
+                                                </div>
+                                                
+                                                <h5 class="h6 mt-3">L'humain, faille numéro un</h5>
+                                                <p>Le piratage informatique n'est pas toujours le fait de génies du clavier : dans 95 % des cas, c'est l'humain qui ouvre la porte aux attaques. Une statistique alarmante, issue du World Economic Forum, citée dans le dernier flash de la DGSI (avril 2025).</p>
+                                                
+                                                <div class="p-3 bg-light rounded mb-3">
+                                                    <i class="fas fa-quote-left me-2 text-primary"></i>
+                                                    « Il ne faut plus être expert, il faut être malin. » - Ancien pirate
+                                                </div>
+                                                
+                                                <h5 class="h6 mt-4 text-danger"><i class="fas fa-bug me-2"></i>Trois scénarios types</h5>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="card h-100 border-danger">
+                                                            <div class="card-body">
+                                                                <h6 class="card-title"><i class="fas fa-mobile-alt me-2 text-danger"></i>Messagerie pro sur perso</h6>
+                                                                <p class="card-text small">Faille zero-day exploitée via smartphone personnel → infiltration du SI</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="card h-100 border-danger">
+                                                            <div class="card-body">
+                                                                <h6 class="card-title"><i class="fas fa-usb me-2 text-danger"></i>Clé USB piégée</h6>
+                                                                <p class="card-text small">Keylogger introduit par un prestataire → compromission réseau</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="card h-100 border-danger">
+                                                            <div class="card-body">
+                                                                <h6 class="card-title"><i class="fab fa-linkedin me-2 text-danger"></i>Faux recruteur</h6>
+                                                                <p class="card-text small">Fichier piégé sur LinkedIn → exfiltration de données sensibles</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <h5 class="h6 mt-3 text-success"><i class="fas fa-shield-alt me-2"></i>Solutions</h5>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <ul class="list-group mb-3">
+                                                            <li class="list-group-item list-group-item-success">Formations phishing par simulation</li>
+                                                            <li class="list-group-item list-group-item-success">Gestionnaires de mots de passe</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <ul class="list-group">
+                                                            <li class="list-group-item list-group-item-success">Tests d'ingénierie sociale</li>
+                                                            <li class="list-group-item list-group-item-success">Principe du moindre privilège</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -338,6 +399,7 @@
                 <div class="col-lg-10">
                     <h2 class="text-center section-title">Mes Analyses de Veille</h2>
                     
+                    <!-- Article DeepMind -->
                     <div class="card veille-card mb-4">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
@@ -388,13 +450,15 @@
                                 <span class="tech-badge bg-success">Régulation équilibrée</span>
                             </div>
                             
-                            
+                            <div class="mt-3 p-3 bg-light rounded">
+                                <h5 class="h6"><i class="fas fa-graduation-cap me-2"></i>Importance pour le BTS SIO</h5>
+                                <p>Comprendre ces enjeux est essentiel pour les techniciens et administrateurs, car l'IA est à la fois un outil de défense et une arme potentielle.</p>
+                            </div>
                         </div>
                     </div>
-                
 
                     <!-- Article WRECKSTEEL -->
-                    <div class="card veille-card">
+                    <div class="card veille-card mb-4">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="fas fa-virus fa-2x me-3 text-primary"></i>
@@ -448,6 +512,109 @@
                                         </ul>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article Erreur Humaine -->
+                    <div class="card veille-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-user-shield fa-2x me-3 text-primary"></i>
+                                <div>
+                                    <h3 class="h5 mb-0">L'erreur humaine, talon d'Achille de la cybersécurité</h3>
+                                    <p class="text-muted mb-0">Damien Bancal - Mai 2025 | DGSI, Social Engineering</p>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-danger mb-3">
+                                <strong>Chiffre clé :</strong> 95% des cyberattaques exploitent l'erreur humaine (World Economic Forum)
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4 class="h6 text-danger"><i class="fas fa-exclamation-circle me-2"></i>Scénarios d'attaque</h4>
+                                    <div class="p-3 border rounded mb-3">
+                                        <div class="d-flex mb-2">
+                                            <span class="badge bg-danger me-2">1</span>
+                                            <div>
+                                                <strong>Messagerie pro sur perso</strong>
+                                                <p class="mb-0 small">Faille zero-day exploitée via smartphone</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mb-2">
+                                            <span class="badge bg-danger me-2">2</span>
+                                            <div>
+                                                <strong>Clé USB piégée</strong>
+                                                <p class="mb-0 small">Keylogger introduit par prestataire</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex">
+                                            <span class="badge bg-danger me-2">3</span>
+                                            <div>
+                                                <strong>Faux recruteur</strong>
+                                                <p class="mb-0 small">Fichier piégé sur LinkedIn</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <h4 class="h6 text-success"><i class="fas fa-check-circle me-2"></i>Mesures de protection</h4>
+                                    <div class="p-3 border rounded">
+                                        <div class="d-flex mb-2">
+                                            <span class="badge bg-success me-2">1</span>
+                                            <div>
+                                                <strong>Formations régulières</strong>
+                                                <p class="mb-0 small">Simulations de phishing</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mb-2">
+                                            <span class="badge bg-success me-2">2</span>
+                                            <div>
+                                                <strong>Politiques strictes</strong>
+                                                <p class="mb-0 small">Charte informatique, MFA</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex">
+                                            <span class="badge bg-success me-2">3</span>
+                                            <div>
+                                                <strong>Moindre privilège</strong>
+                                                <p class="mb-0 small">Limitation des accès</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3 p-3 bg-light rounded">
+                                <h5 class="h6"><i class="fas fa-table me-2"></i>Veille associée (Mai 2025)</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-sm table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-nowrap">26 avril</td>
+                                                <td>Rapport DGSI : Ingérence économique 2025</td>
+                                                <td class="text-nowrap"><span class="badge bg-info">Attaques hybrides</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>21 avril</td>
+                                                <td>Change Healthcare : Analyse de l'attaque</td>
+                                                <td><span class="badge bg-info">Ransomware</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>15 avril</td>
+                                                <td>L'ingénierie sociale, arme n°1</td>
+                                                <td><span class="badge bg-info">ZATAZ</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3 p-3 bg-primary text-white rounded">
+                                <h5 class="h6"><i class="fas fa-clipboard-check me-2"></i>Conclusion</h5>
+                                <p class="mb-0">Le facteur humain reste la faille la plus critique. Une formation continue, une politique claire et une vigilance constante sont indispensables pour toute entreprise soucieuse de sa sécurité.</p>
                             </div>
                         </div>
                     </div>

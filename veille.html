@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique - Robin Martin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .veille-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .veille-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .tech-badge {
+            background-color: var(--secondary-color);
+            color: white;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+        }
+        
+        .article-content {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 15px;
+        }
+        
+        .article-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .article-content::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        main {
+            flex: 1;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white shadow-sm sticky-top">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <h1 class="fw-bold mb-0">Portfolio</h1>
+            <nav>
+                <ul class="nav text-uppercase fw-bold">
+                    <li class="nav-item"><a class="nav-link text-dark" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="projet.html">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="veille.html">Veille</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="cv-robin-martin.pdf" target="_blank">CV</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="tableau.pdf">Tableau de Synthèse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Veille Technologique</h1>
+            <p class="lead">Restez informé des dernières tendances et innovations technologiques</p>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <!-- Section Outils de Veille recentrée -->
+        <section id="outils-veille" class="mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="text-center section-title">Outils de Veille</h2>
+                    <div class="card veille-card">
+                        <div class="card-body">
+                            <div class="row">
+                                <!-- Colonne Sources -->
+                                <div class="col-md-6 border-end">
+                                    <h3 class="h4 mb-4 text-center"><i class="fas fa-newspaper me-2"></i>Sources Principales</h3>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                                                <i class="fab fa-google me-3 text-primary"></i>
+                                                <div>
+                                                    <h5 class="mb-1">Google DeepMind</h5>
+                                                    <p class="mb-0 text-muted small">Blog officiel</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                                                <i class="fas fa-lock me-3 text-primary"></i>
+                                                <div>
+                                                    <h5 class="mb-1">DarkReading</h5>
+                                                    <p class="mb-0 text-muted small">Cybersécurité</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                                                <i class="fab fa-reddit me-3 text-primary"></i>
+                                                <div>
+                                                    <h5 class="mb-1">r/AI</h5>
+                                                    <p class="mb-0 text-muted small">Communauté Reddit</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                                                <i class="fas fa-bug me-3 text-primary"></i>
+                                                <div>
+                                                    <h5 class="mb-1">BleepingComputer</h5>
+                                                    <p class="mb-0 text-muted small">Actualités tech</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                                                <i class="fas fa-shield-alt me-3 text-primary"></i>
+                                                <div>
+                                                    <h5 class="mb-1">The Hacker News</h5>
+                                                    <p class="mb-0 text-muted small">Sécurité info</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                                                <i class="fas fa-database me-3 text-primary"></i>
+                                                <div>
+                                                    <h5 class="mb-1">Towards Data Science</h5>
+                                                    <p class="mb-0 text-muted small">ML/AI</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 p-3 bg-light rounded">
+                                        <h5 class="h6 mb-2">Autres sources suivies :</h5>
+                                        <div class="d-flex flex-wrap">
+                                            <span class="tech-badge">Krebs on Security</span>
+                                            <span class="tech-badge">OpenAI News</span>
+                                            <span class="tech-badge">UnderNews</span>
+                                            <span class="tech-badge">ZATAZ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Colonne Articles Complets -->
+                                <!-- Colonne Articles Complets -->
+<div class="col-md-6">
+    <h3 class="h4 mb-4 text-center"><i class="fas fa-book-open me-2"></i>Articles Complets</h3>
+    <ul class="nav nav-tabs mb-4" id="articleTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="deepmind-tab" data-bs-toggle="tab" data-bs-target="#deepmind" type="button" role="tab">DeepMind IA</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="wrecksteel-tab" data-bs-toggle="tab" data-bs-target="#wrecksteel" type="button" role="tab">WRECKSTEEL</button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="articleTabsContent">
+        <!-- Article DeepMind -->
+        <div class="tab-pane fade show active" id="deepmind" role="tabpanel">
+            <div class="article-content">
+                <h4 class="h5">🛡️ Veille technologique : Les risques potentiels de l’IA avancée en cybersécurité selon DeepMind</h4>
+                <p class="text-muted small">📅 Date de publication : Mars 2025</p>
+                <p><strong>🧠 Thème :</strong> Cybersécurité & Intelligence Artificielle</p>
+                <p><strong>🔍 Source :</strong> DeepMind — Evaluating Potential Cybersecurity Threats of Advanced AI</p>
+
+                <h5 class="h6 mt-3">🧩 Contexte</h5>
+                <p>L’essor de l’intelligence artificielle (IA), notamment des modèles avancés comme les LLMs (Large Language Models), soulève de nombreuses opportunités dans l’automatisation, la détection de menaces, et la défense numérique. Cependant, il présente également des risques accrus en matière de cybersécurité. L’article publié par DeepMind, filiale IA de Google, aborde de manière approfondie ces menaces émergentes.</p>
+
+                <h5 class="h6 mt-3">⚠️ Quels sont les risques identifiés ?</h5>
+                <ul>
+                    <li><strong>Automatisation des attaques :</strong> Les IA peuvent aider à automatiser des attaques complexes, comme le phishing ou l’ingénierie sociale, en personnalisant les messages à une échelle massive.</li>
+                    <li><strong>Exploration de vulnérabilités :</strong> Certains modèles pourraient être utilisés pour rechercher des failles de sécurité dans du code source, comme un assistant pour les attaquants.</li>
+                    <li><strong>Contournement de défenses :</strong> Des IA pourraient apprendre à éviter les systèmes de détection (IDS/IPS) ou générer du code malveillant plus difficile à repérer.</li>
+                </ul>
+
+                <h5 class="h6 mt-3">🧪 Méthode d’évaluation de DeepMind</h5>
+                <p>DeepMind propose un cadre d’évaluation appelé “Cybersecurity Risk Framework”, structuré autour de 3 axes :</p>
+                <ol>
+                    <li><strong>Capacités :</strong> Que peut réellement faire le modèle ?</li>
+                    <li><strong>Accessibilité :</strong> Est-ce que ce modèle est ouvert ou contrôlé ?</li>
+                    <li><strong>Abusabilité :</strong> Dans quelle mesure peut-il être détourné à des fins malveillantes ?</li>
+                </ol>
+                <p>L’objectif est de prévenir les risques avant la mise à disposition publique d’un modèle d’IA.</p>
+
+                <h5 class="h6 mt-3">🛡️ Mesures de protection recommandées</h5>
+                <ul>
+                    <li>Des tests internes rigoureux,</li>
+                    <li>Une collaboration active avec la communauté cybersécurité,</li>
+                    <li>Une régulation équilibrée pour limiter les abus tout en soutenant l’innovation.</li>
+                </ul>
+
+               
+
+                <h5 class="h6 mt-3">✅ Conclusion</h5>
+                <p>Cet article de DeepMind montre que l’IA, tout en étant prometteuse, peut aussi amplifier les cybermenaces si elle est mal utilisée. Il est crucial pour les techniciens et administrateurs systèmes et réseaux de comprendre ces risques pour mieux intégrer l’IA de façon sécurisée dans les infrastructures informatiques.</p>
+            </div>
+        </div>
+
+        <!-- Article WRECKSTEEL -->
+        <div class="tab-pane fade" id="wrecksteel" role="tabpanel">
+            <div class="article-content">
+                <h4 class="h5">🔍 Veille technologique : WRECKSTEEL, une cybermenace ciblant l’Ukraine</h4>
+                <p class="text-muted small">📅 Date de publication : Avril 2025</p>
+                <p><strong>🧠 Thème :</strong> Cybersécurité — Cyberattaques étatiques</p>
+                <p><strong>🔍 Source :</strong> The Hacker News – Rapport du CERT-UA</p>
+
+                <h5 class="h6 mt-3">🧩 Contexte</h5>
+                <p>Le CERT-UA (Computer Emergency Response Team of Ukraine) a détecté une série d’attaques majeures contre des entités gouvernementales et des infrastructures critiques. Ces attaques sont attribuées à un groupe identifié sous le nom de UAC-0219.</p>
+
+                <h5 class="h6 mt-3">🛠️ Méthode d’attaque</h5>
+                <ul>
+                    <li>Campagnes de phishing à grande échelle via des emails compromis,</li>
+                    <li>Utilisation de liens malveillants hébergés sur DropMeFiles et Google Drive,</li>
+                    <li>Déploiement de scripts VBS et PowerShell pour l’exfiltration de données sensibles.</li>
+                </ul>
+
+                <h5 class="h6 mt-3">🎯 Groupe responsable</h5>
+                <p>Le groupe UAC-0219 est actif depuis l’automne 2024. Il cible principalement les infrastructures critiques avec un haut niveau de sophistication.</p>
+
+                <h5 class="h6 mt-3">📌 Analyse stratégique</h5>
+                <p>Cette menace illustre l’augmentation des attaques cybernétiques à dimension géopolitique. Elle montre également la nécessité d’outils de détection automatisés, de politiques de sensibilisation renforcées et d’une coordination internationale en matière de cybersécurité.</p>
+
+                
+
+                <h5 class="h6 mt-3">✅ Conclusion</h5>
+                <p>WRECKSTEEL est un cas concret d’attaque ciblée à haute intensité, et souligne l'importance pour les futurs professionnels IT de rester informés et préparés. Une veille technologique active est indispensable pour anticiper ces risques.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Sujets de Veille -->
+        <section id="sujets-veille" class="mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="text-center section-title">Sujets Suivis</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card veille-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-shield-alt fa-2x me-3 text-primary"></i>
+                                        <div>
+                                            <h3 class="h5 mb-0">Cybersécurité</h3>
+                                            <p class="text-muted mb-0">Tendances et vulnérabilités</p>
+                                        </div>
+                                    </div>
+                                    <p>Veille sur les nouvelles menaces, techniques de protection et bonnes pratiques en sécurité informatique.</p>
+                                    <div class="mt-2">
+                                        <span class="tech-badge">ANSSI</span>
+                                        <span class="tech-badge">OWASP</span>
+                                        <span class="tech-badge">Zero Trust</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card veille-card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-cloud fa-2x me-3 text-primary"></i>
+                                        <div>
+                                            <h3 class="h5 mb-0">Cloud Computing</h3>
+                                            <p class="text-muted mb-0">Évolutions et innovations</p>
+                                        </div>
+                                    </div>
+                                    <p>Suivi des évolutions des plateformes cloud (AWS, Azure, GCP) et des nouvelles architectures serverless.</p>
+                                    <div class="mt-2">
+                                        <span class="tech-badge">AWS</span>
+                                        <span class="tech-badge">Azure</span>
+                                        <span class="tech-badge">Kubernetes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Analyses de Veille -->
+        <section id="mes-articles">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="text-center section-title">Mes Analyses de Veille</h2>
+                    
+                    <div class="card veille-card mb-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-robot fa-2x me-3 text-primary"></i>
+                                <div>
+                                    <h3 class="h5 mb-0">Les risques potentiels de l'IA avancée en cybersécurité</h3>
+                                    <p class="text-muted mb-0">DeepMind - Mars 2025 | Cybersécurité & IA</p>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info mb-3">
+                                <strong>Contexte :</strong> L'article de DeepMind aborde les risques émergents liés aux IA avancées comme les LLMs.
+                            </div>
+                            
+                            <h4 class="h6 mt-4 text-danger"><i class="fas fa-exclamation-triangle me-2"></i>Risques identifiés</h4>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item">Automatisation des attaques (phishing, ingénierie sociale)</li>
+                                <li class="list-group-item">Exploration automatisée de vulnérabilités</li>
+                                <li class="list-group-item">Contournement des systèmes de détection (IDS/IPS)</li>
+                            </ul>
+                            
+                            <h4 class="h6 mt-3 text-primary"><i class="fas fa-flask me-2"></i>Méthode d'évaluation</h4>
+                            <div class="row text-center mb-3">
+                                <div class="col-md-4">
+                                    <div class="p-3 border rounded">
+                                        <strong>Capacités</strong><br>
+                                        Que peut faire le modèle ?
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 border rounded">
+                                        <strong>Accessibilité</strong><br>
+                                        Modèle ouvert ou contrôlé ?
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 border rounded">
+                                        <strong>Abusabilité</strong><br>
+                                        Potentiel de détournement
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="h6 mt-3 text-success"><i class="fas fa-shield-alt me-2"></i>Recommandations</h4>
+                            <div class="d-flex flex-wrap">
+                                <span class="tech-badge bg-success">Tests rigoureux</span>
+                                <span class="tech-badge bg-success">Collaboration</span>
+                                <span class="tech-badge bg-success">Régulation équilibrée</span>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                
+
+                    <!-- Article WRECKSTEEL -->
+                    <div class="card veille-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-virus fa-2x me-3 text-primary"></i>
+                                <div>
+                                    <h3 class="h5 mb-0">WRECKSTEEL : nouvelle cybermenace en Ukraine</h3>
+                                    <p class="text-muted mb-0">The Hacker News - Avril 2025 | Malware</p>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-warning mb-3">
+                                <strong>Source :</strong> CERT-UA (Computer Emergency Response Team of Ukraine)
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4 class="h6 text-danger"><i class="fas fa-bomb me-2"></i>Méthode d'attaque</h4>
+                                    <div class="mb-3">
+                                        <div class="p-3 border rounded mb-2">
+                                            <i class="fas fa-envelope text-danger me-2"></i>
+                                            <strong>Phishing avancé</strong>
+                                            <ul class="mt-2 mb-0">
+                                                <li>Comptes email compromis</li>
+                                                <li>Liens DropMeFiles/Google Drive</li>
+                                                <li>PDF piégés</li>
+                                            </ul>
+                                        </div>
+                                        <div class="p-3 border rounded">
+                                            <i class="fas fa-code text-danger me-2"></i>
+                                            <strong>Technique malware</strong>
+                                            <ul class="mt-2 mb-0">
+                                                <li>Script VBS malveillant</li>
+                                                <li>Appel PowerShell</li>
+                                                <li>Vol de fichiers + captures</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="h6 text-primary"><i class="fas fa-user-secret me-2"></i>Groupe responsable</h4>
+                                    <div class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                                        <span class="badge bg-danger me-3">UAC-0219</span>
+                                        Actif depuis l'automne 2024 | Ciblage d'infrastructures critiques
+                                    </div>
+                                    
+                                    <h4 class="h6 text-success"><i class="fas fa-lightbulb me-2"></i>Enjeux pour le BTS SIO</h4>
+                                    <div class="p-3 border rounded">
+                                        <ul class="mb-0">
+                                            <li>Importance de la protection des messageries</li>
+                                            <li>Nécessité de contrôler l'exécution des scripts</li>
+                                            <li>Veille active sur les nouvelles menaces</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer harmonisé avec l'index -->
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5>Robin Martin</h5>
+                    <p>Étudiant en BTS SIO</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="https://www.linkedin.com/in/robin-martin04" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="mailto:robinmartin0404@gmail.com" class="text-white mx-2"><i class="fas fa-envelope fa-2x"></i></a>
+                </div>
+            </div>
+            <hr class="my-3 bg-light">
+            <div class="text-center">
+                <p class="mb-0">© 2025 - Portfolio Robin Martin - BTS SIO</p>
+                <p class="legal-text small">
+                    Hébergement : <br>
+                    Ce portfolio a été créé dans le cadre de mon BTS SIO<br>
+                    Dernière mise à jour : Mai 2025
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Active les onglets Bootstrap
+        var tabElms = [].slice.call(document.querySelectorAll('button[data-bs-toggle="tab"]'));
+        tabElms.forEach(function(tabElm) {
+            new bootstrap.Tab(tabElm);
+        });
+    </script>
+</body>
+</html>
